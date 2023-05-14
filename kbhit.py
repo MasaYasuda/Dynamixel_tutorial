@@ -1,3 +1,5 @@
+# FROM "https://gist.github.com/michelbl/efda48b19d3e587685e3441a74457024"
+
 '''
 A Python class implementing KBHIT, the standard keyboard-interrupt poller.
 Works transparently on Windows and Posix (Linux, Mac OS X).  Doesn't work
