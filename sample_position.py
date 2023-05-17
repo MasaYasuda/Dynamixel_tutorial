@@ -7,10 +7,9 @@ try:
   dxl = dyna.Dynamixel("COM4",57600) #インスタンス化
   kb = kbhit.KBHit() #キーボード入力のクラス立ち上げ
   time.sleep(0.5)  #通信が確立するまでちょっと待つ（待たなくても良いが高速すぎるとバッファが溢れ命令実行漏れが発生する）
-  # ID 1 土台左右 #
+  dxl.set_mode_position(1) #位置（角度）制御モードに設定
   min_1=0
   max_1=4095
-  dxl.set_mode_position(1) #位置（角度）制御モードに設定
   dxl.set_min_max_position(1,min_1,max_1) #位置の上下限を設定
   now_goal1=int(dxl.read_position(1)) #現在の位置を取得し目標値の初期値として代入
   dxl.enable_torque(1) #トルクをオンにする（手で動かせなくなる）

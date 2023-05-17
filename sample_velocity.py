@@ -6,7 +6,6 @@ try:
     dxl = dyna.Dynamixel("COM?", 57600)  # インスタンス化
     kb = kbhit.KBHit()  # キーボード入力のクラス立ち上げ
     time.sleep(0.5)  # 通信が確立するまでちょっと待つ（待たなくても良いが高速すぎるとバッファが溢れ命令実行漏れが発生する）
-
     dxl.set_mode_velocity(1)  # 速度制御モードに設定
     max_1 = 250
     dxl.set_max_velocity(1, max_1)  # 速度の上限を設定
